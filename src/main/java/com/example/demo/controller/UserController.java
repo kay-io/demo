@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.dto.UserDto;
 import com.example.demo.service.UserService;
 import com.example.demo.utils.Constants;
+import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * Created by ashish on 13/5/17.
@@ -35,5 +37,11 @@ public class UserController {
 	@RequestMapping(value= Constants.SAVE_USER, method= RequestMethod.POST)
 	public void saveUser(@RequestBody UserDto userDto) {
 		userService.saveUser(userDto);
+	}
+	
+	@RequestMapping(Constants.GET_USER_SCORE_ID)
+	@GetMapping(value = "/getUser/score/{userName}")
+	public JsonNode getUserScoreId(@PathVariable String userName) {
+		return userService.getUserScoreById(userName);
 	}
 }
