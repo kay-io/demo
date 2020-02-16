@@ -1,0 +1,36 @@
+{
+  "samyak": [
+    {
+      "id" : "1",
+      "name" : "Java",
+      "endorsements" : "40"
+    },
+    {
+      "id" : "2",
+      "name" : "Erlang",
+      "endorsements" : "100"
+    },
+    {
+      "id" : "3",
+      "name" : "Elixir",
+      "endorsements" : "100"
+    }
+  ],
+  "Shakti": [
+    {
+      "id" : "1",
+      "name" : "Java",
+      "endorsements" : "10"
+    },
+    {
+      "id" : "2",
+      "name" : "Erlang",
+      "endorsements" : "0"
+    },
+    {
+      "id" : "3",
+      "name" : "Elixir",
+      "endorsements" : "5"
+    }
+  ]
+}
