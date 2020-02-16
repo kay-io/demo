@@ -44,4 +44,11 @@ public class UserController {
 	public JsonNode getUserScoreId(@PathVariable String userName) {
 		return userService.getUserScoreById(userName);
 	}
+
+	@RequestMapping(Constants.GET_SKILLS_PER_USER)
+	@GetMapping(value = "/getUser/skills/{userName}")
+	public JsonNode getUserSkills(@PathVariable String userName) {
+		return userService.getUserSkills(userName);
+	}
+
 }

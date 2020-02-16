@@ -11,4 +11,5 @@ public interface UserService {
     void saveUser(UserDto userDto);
     List<UserDto> getAllUsers();
 	JsonNode getUserScoreById(String userName);
+	JsonNode getUserSkills(String userName);
 }
