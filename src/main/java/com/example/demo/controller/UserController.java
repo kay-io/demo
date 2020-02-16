@@ -51,4 +51,12 @@ public class UserController {
 		return userService.getUserSkills(userName);
 	}
 
+	@RequestMapping(Constants.GET_PROFIL_MATCH_SCORE)
+	@GetMapping(value = "/getUser/profile_match_score/{jd}/{userName}")
+	public JsonNode getProfileMatchScore(@PathVariable("jd") String jd, @PathVariable("userName") String userName) {
+		System.out.println("0000000000");
+		return userService.getScore(jd, userName);
+	}
+
+
 }

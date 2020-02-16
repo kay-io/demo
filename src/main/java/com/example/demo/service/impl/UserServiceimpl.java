@@ -63,6 +63,7 @@ public class UserServiceimpl implements UserService {
 
 		try {
 			jsonNode = objectMapper.readTree(from);
+
 			System.out.println(jsonNode.path(userId));
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
@@ -72,4 +73,22 @@ public class UserServiceimpl implements UserService {
 		return jsonNode.path(userId);
 	}
 
+	public JsonNode getScore(String jd, String userId) {
+		ObjectMapper objectMapper = new ObjectMapper();
+		File from = new File(System.getProperty("user.dir") + "/restApiResponses/getProfileMatch.json");
+		JsonNode jsonNode = null;
+
+		try {
+			jsonNode = objectMapper.readTree(from);
+
+			System.out.println(jsonNode.path(userId));
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return jsonNode.path(userId);
+	}
 }
+
+

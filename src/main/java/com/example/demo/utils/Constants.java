@@ -6,4 +6,5 @@ public interface Constants {
 	static final String SAVE_USER = "/saveUser";
 	static final String GET_USER_SCORE_ID = "/getUser/score/{userName}";
 	static final String GET_SKILLS_PER_USER = "/getUser/skills/{userName}";
+	static final String GET_PROFIL_MATCH_SCORE = "/getUser/profile_match_score/{jd}/{userName}";
 }

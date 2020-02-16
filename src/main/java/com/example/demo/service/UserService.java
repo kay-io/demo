@@ -12,4 +12,5 @@ public interface UserService {
     List<UserDto> getAllUsers();
 	JsonNode getUserScoreById(String userName);
 	JsonNode getUserSkills(String userName);
+	JsonNode getScore(String jd, String userName);
 }
